@@ -1,0 +1,6 @@
+{
+  "grants": [
+    {"src": ["autogroup:member"], "dst": ["*"], "ip": ["*"]},
+    {"src": ["autogroup:shared"], "dst": ["100.101.102.103"], "ip": ["udp:5520"]}
+  ]
+}

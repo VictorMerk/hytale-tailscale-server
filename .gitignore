@@ -1,0 +1,20 @@
+# Runtime data and proprietary game payloads never belong in this repository.
+*.jar
+*.zip
+*.tar*
+*.key
+*.pem
+*.aot*
+*.log
+*.pyc
+__pycache__/
+.env
+server.env
+game/
+universe/
+backups/
+logs/
+auth.*
+credentials*
+*handover*
+diagnostic-continuation.txt

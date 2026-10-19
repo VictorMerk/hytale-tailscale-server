@@ -1,0 +1,21 @@
+[Unit]
+Description=Private Hytale server over Tailscale
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hytale
+Group=hytale
+EnvironmentFile=/etc/hytale/server.env
+WorkingDirectory=/srv/hytale/game/Server
+ExecStart=/usr/local/lib/hytale/launch.sh
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=90
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
